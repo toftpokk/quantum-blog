@@ -2,7 +2,7 @@ baseURL = 'https://quantum-computing.pages.dev/'
 languageCode = 'en-us'
 title = 'Quantum Computing'
 theme = 'archie'
-copyright = "© toftpokk"
+copyright = "toftpokk"
 
 pygmentsstyle = "one-dark"
 pygmentscodefences = true
