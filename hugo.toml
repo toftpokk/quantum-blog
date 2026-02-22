@@ -1,6 +1,6 @@
 baseURL = 'https://quantum-computing.pages.dev/'
 languageCode = 'en-us'
-title = 'Quantum Computing'
+title = 'The Qubit Architect'
 theme = 'archie'
 copyright = "toftpokk"
 
@@ -15,7 +15,7 @@ pygmentscodefencesguesssyntax = true
 [params]
   mode="dark"
   useCDN=false
-  subtitle="toftpokk's Quantum Computing Blog"
+  subtitle="Learning Quantum Computing One Qubit at a Time"
   mathjax = true
   katex = true
 
