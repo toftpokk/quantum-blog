@@ -1,6 +1,6 @@
 ---
 date: '2026-02-22T21:13:12+07:00'
-# lastmod: '{{ .Date }}'
+lastmod: '2026-03-14T12:15:31+07:00'
 draft: false
 title: 'Quantum Networking'
 ---
@@ -18,41 +18,42 @@ towards quantum communication, including myself.
 Since qubits are very fragile things, and with physical limitations
 for example, the no-cloning theorem which forbids copying of qubits,
 qubits are very hard to work with. Sending them between locations
-thousands of kilometers apart practically guarantees loss of information.
+hundreds of kilometers apart practically guarantees loss of information.
 So, the agreed upon method for sending qubits is by using entanglement.
 
 {{< figure
-  src="./quantum-networking-1.png"
+  src="./a-b-diagram.png"
   alt="Two computers communicating over a network"
   width="700"
   height="auto"
 >}}
 
 ## Entanglement
-The idea is: instead of computer A sending qubits to computer B directly,
+The idea is, instead of computer A sending qubits to computer B directly,
 the two computers entangle qubits with eachother and send the target
-qubit via quantum teleportation. This lets the connection be able to fail
+qubit via quantum teleportation. This allows the connection to fail
 and recover without losing any information. Entanglement may fail over
 and over, but you won't lose data. It also lets you decouple the network 
 logic and the sending of data from eachother. You can use any network
 path, redo or purify as much as you want and still guarantee the qubit
-is delivered.
+is delivered. This also opens up more complex operations like multiplexing,
+and purification which we will talk about later.
 
 Creating this entanglement is the crux of quantum networking. Much like
 classical networking, there are a myriad of ways to establish a
 connection between parties and maintain it.
 
 {{< figure
-  src="./quantum-networking-2.png"
+  src="./a-b-entanglement-2.png"
   alt="Entanglement swapping between two computers"
   width="700"
   height="auto"
 >}}
 
-## Quantum Repeater
+## The Quantum Repeater
 
 {{< figure
-  src="./quantum-networking-3.png"
+  src="./a-b-repeater.png"
   alt="Two computers communicating through a repeater"
   width="700"
   height="auto"
@@ -61,18 +62,21 @@ connection between parties and maintain it.
 Much like the sending of qubits themselves, entangled particles are
 also fragile over long distances. That is why a repeater is needed.
 
-A quantum repeater is a device which does a few things[^2]. First it
-creates two entangled pairs, between the repeater and both computers
-connected to it. Second, it does entanglement swapping between those
-two connections. Third, it handles errors. Finally, it participates
-in network operations. Let's break this down.
+A quantum repeater differs from a classical repeater because of the
+quantum nature of the quantum data itself. As qubits cannot be copied
+entangled or otherwise, a quantum repeater has to use a different
+strategy: entanglement swapping.
 
-[^2]: Meter, R.V. (2021). A Quantum Internet Architecture. https://arxiv.org/abs/2112.07092
+When entangled particles are sent to a repeater, it "swaps" them.
+This swapping results in entangled particles from both ends becoming
+entangled.
 
-Creating the base entanglements is just creating two pairs of
-entangled particles, keeping one particle of each pair and sending the
-others to either side. This is commonly done by using bell pairs
+{{< figure
+  src="./entanglement-swapping.png"
+  alt="Entanglement swapping process"
+  height="auto"
+>}}
 
-
-[^X]: Jones, C. et al. (2016). Design and analysis of communication protocols for quantum repeater networks. doi:10.1088/1367-2630/18/8/083015
-
+Quantum repeaters and entanglements form the backbone of a quantum
+network. We will talk more about how repeaters coordinate with eachoter
+and how it forms the quantum network as a whole.
