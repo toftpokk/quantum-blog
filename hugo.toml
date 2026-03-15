@@ -19,6 +19,7 @@ pygmentscodefencesguesssyntax = true
   mathjax = true
   katex = true
   customcss = ["css/custom.css"]
+  favicon = "/favicon.ico"
 
 [permalinks]
   posts = "/posts/:year/:slug"
