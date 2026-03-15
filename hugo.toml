@@ -64,13 +64,18 @@ pygmentscodefencesguesssyntax = true
 
 [[params.social]]
 name = "GitHub"
-icon = "github"
+icon = "simple:github"
 url = "https://github.com/toftpokk"
 
 [[params.social]]
 name = "GitLab"
-icon = "gitlab"
+icon = "simple:gitlab"
 url = "https://gitlab.com/toftpokk"
+
+[[params.social]]
+name = "Mastodon"
+icon = "simple:mastodon"
+url = "https://mastodon.social/@qubit_architect"
 
 [[menu.main]]
 name = "Home"
