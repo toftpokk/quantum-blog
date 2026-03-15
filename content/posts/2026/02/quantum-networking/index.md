@@ -24,6 +24,7 @@ So, the agreed upon method for sending qubits is by using entanglement.
 {{< figure
   src="./a-b-diagram.png"
   alt="Two computers communicating over a network"
+  class="insert-image"
   width="700"
   height="auto"
 >}}
@@ -46,6 +47,7 @@ connection between parties and maintain it.
 {{< figure
   src="./a-b-entanglement-2.png"
   alt="Entanglement swapping between two computers"
+  class="insert-image"
   width="700"
   height="auto"
 >}}
@@ -55,6 +57,7 @@ connection between parties and maintain it.
 {{< figure
   src="./a-b-repeater.png"
   alt="Two computers communicating through a repeater"
+  class="insert-image"
   width="700"
   height="auto"
 >}}
@@ -73,6 +76,7 @@ entangled.
 
 {{< figure
   src="./entanglement-swapping.png"
+  class="insert-image"
   alt="Entanglement swapping process"
   height="auto"
 >}}

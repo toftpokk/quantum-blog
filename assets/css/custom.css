@@ -1,0 +1,13 @@
+.body figure,
+figure.insert-image {
+  display: block;
+  padding: .5em 0;
+}
+
+figure img,
+.insert-image img {
+  margin: 0 auto;
+  display: block;
+  max-width: min(700px, 100%);
+  height: auto;
+}

@@ -18,6 +18,7 @@ pygmentscodefencesguesssyntax = true
   subtitle="Learning Quantum Computing One Qubit at a Time"
   mathjax = true
   katex = true
+  customcss = ["css/custom.css"]
 
 [permalinks]
   posts = "/posts/:year/:slug"
