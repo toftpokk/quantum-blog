@@ -1,6 +1,6 @@
 ---
 date: '2026-04-07T18:08:05+07:00'
-lastmod: '2026-04-07T18:08:05+07:00'
+lastmod: '2026-04-07T21:27:48+07:00'
 draft: false
 title: 'Node-to-Node Links'
 ---
@@ -81,7 +81,7 @@ necessary part of quantum networks as you will see.
 
 {{< figure
   src="./meet-in-the-middle.png"
-  alt="A link in a quantum network from node A to B, made up of one quantum and one classical link"
+  alt="Two nodes sending photons to a central bell state analyzer. All three connected together with a classical circuits"
   class="insert-image"
   width="700"
   height="auto"
@@ -106,7 +106,7 @@ thereby completing the entanglement process.
 
 {{< figure
   src="./sender-receiver.png"
-  alt="A link in a quantum network from node A to B, made up of one quantum and one classical link"
+  alt="A sender node sending photons to a receiver node with a bell state analyzer. Both connected with a classical circuit"
   class="insert-image"
   width="700"
   height="auto"
@@ -124,7 +124,7 @@ that it's self contained. No center node is required.
 
 {{< figure
   src="./midpoint-source.png"
-  alt="A link in a quantum network from node A to B, made up of one quantum and one classical link"
+  alt="Two nodes, each with BSMs, and a central entangled source sending photons to both nodes. The two nodes are connected with a classical circuit."
   class="insert-image"
   width="700"
   height="auto"
@@ -134,21 +134,21 @@ The last protocol is the midpoint-source protocol. As the name suggests,
 the source is in the middle and measurement is done at both ends.
 
 The midpoint generates entangled protons and sends them to both ends.
-The end nodes each have BSMs and swaps its own entangled pair with
+The end nodes each have BSAs and swaps its own entangled pair with
 the received photon, independently. The results are then classically
 communicated both ways.
 
-This may seem insane at first, you need two BSMs and a center node, and
+This may seem insane at first, you need two BSAs and a center node, and
 you also need to communicate classically both ways. but its gains are
 justified. It leverages the fact that photon sources are a
-more mature technology than BSMs so having sources at the middle is 
+more mature technology than BSAs so having sources at the middle is 
 less of a problem. Measuring at the endpoints also locks quantum memory
 for a shorter time much like sender-receiver, but for both ends. This
 faster failure also allows more trials, and a faster clock speed.
 
 ## Conclusion
 
-Link-layer quantum entanglement generation is quite fascinating in that
+Quantum entanglement generation is quite fascinating in that
 its quite a bit more complicated than sending physical bits. The medium
 is fragile and time sensitive, and we've not even started talking
 about error correction!
