@@ -1,6 +1,6 @@
 ---
 date: '2026-03-15T12:22:54+07:00'
-# lastmod: '2026-03-15T12:22:54+07:00'
+lastmod: '2026-04-07T18:08:05+07:00'
 draft: false
 title: 'Node-to-Node Links'
 ---
