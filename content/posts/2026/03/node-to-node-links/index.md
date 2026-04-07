@@ -91,39 +91,65 @@ This is considered the most simple and straight forward protocol. In this set up
 B are placed a distance apart, with a bell state analyzer at the center. A and B are
 time-synchronized.
 
-The entanglement process is thus: first A and B each generate an entangled particle pair
-independently. Then, each one sends one part of their pair to the BSA. Assuming, no
-loss or noise occurs, the BSA will receive both particles at the same time, and swaps
-them. Note that the swapping process happens passively by the BSA. The heralding
-signal is then sent back to both nodes classically, thereby completing the
-entanglement process.
+The entanglement process is thus:
+
+1. A and B each generate an entangled particle pair
+independently. 
+2. Each one sends one part of their pair to the BSA.
+3. The BSA will receive both particles at the same time, and 
+swaps them. Note that the swapping process happens passively by the BSA.
+4. The heralding signal is then sent back to both nodes classically, 
+thereby completing the entanglement process.
 
 
 ## Sender-Receiver
 
-<!--
-Add advantages & disadvantages of the three protocols
-MITM
-SR
-MS
+{{< figure
+  src="./sender-receiver.png"
+  alt="A link in a quantum network from node A to B, made up of one quantum and one classical link"
+  class="insert-image"
+  width="700"
+  height="auto"
+>}}
 
-MITM:
-- simple protocol
-- but, a center BSA is expensive
-- locks up both qubits the entire time
+The sender-receiver protocol is simply the meet-in-the-middle protocol
+with the bell state analyzer moved to the receiver node.
+The advantages this setup provides over meet-in-the middle is that
+if the entanglement fails, the receiver knows right away, thereby
+freeing quantum memory of one node. The other node's quantum memory
+however, will be locked for the entire run. One other advantage is
+that it's self contained. No center node is required.
 
-SR
-- self-contained
-- faster decisions in the receiver's side
-- only locks up qubits for one side
-- but still needs memory lock up
-- locks up senderr for the entire time
+## Midpoint-source
 
-MS
-- higher performance (why?)
-- robust to losses (why?)
-- locks up qubits for a shorter amount of time
-- photon source technology is more developed
-- but more hardware requirements
-- more complex
--->
+{{< figure
+  src="./midpoint-source.png"
+  alt="A link in a quantum network from node A to B, made up of one quantum and one classical link"
+  class="insert-image"
+  width="700"
+  height="auto"
+>}}
+
+The last protocol is the midpoint-source protocol. As the name suggests,
+the source is in the middle and measurement is done at both ends.
+
+The midpoint generates entangled protons and sends them to both ends.
+The end nodes each have BSMs and swaps its own entangled pair with
+the received photon, independently. The results are then classically
+communicated both ways.
+
+This may seem insane at first, you need two BSMs and a center node, and
+you also need to communicate classically both ways. but its gains are
+justified. It leverages the fact that photon sources are a
+more mature technology than BSMs so having sources at the middle is 
+less of a problem. Measuring at the endpoints also locks quantum memory
+for a shorter time much like sender-receiver, but for both ends. This
+faster failure also allows more trials, and a faster clock speed.
+
+## Conclusion
+
+Link-layer quantum entanglement generation is quite fascinating in that
+its quite a bit more complicated than sending physical bits. The medium
+is fragile and time sensitive, and we've not even started talking
+about error correction!
+
