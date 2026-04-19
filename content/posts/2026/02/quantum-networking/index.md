@@ -45,10 +45,9 @@ classical networking, there are a myriad of ways to establish a
 connection between parties and maintain it.
 
 {{< figure
-  src="./a-b-entanglement-2.png"
+  src="./a-b-entanglement.png"
   alt="Entanglement swapping between two computers"
   class="insert-image"
-  width="700"
   height="auto"
 >}}
 
