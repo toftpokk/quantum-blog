@@ -8,6 +8,8 @@ pygmentsstyle = "one-dark"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
+enableRobotsTXT = true
+
 
 [pagination]
   pagerSize = 3
