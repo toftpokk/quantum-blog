@@ -1,6 +1,6 @@
 ---
 date: '2026-07-26T16:34:03+07:00'
-lastmod: '2026-07-26T16:34:03+07:00'
+lastmod: '2026-07-26T16:59:17+07:00'
 title: 'Paper: A Link Layer Protocol for Quantum Networks'
 tags: [notes]
 ---
@@ -95,7 +95,7 @@ And the physical layer, being time-slotted, can fulfill a request
 at full throttle. Thereby, making these two layers fully independent.
 
 The trade-off is the time delay between the generation itself and the
-response, which is guarateed to be a cycle or more, as illustrated.
+response, which is guaranteed to be a cycle or more, as illustrated.
 Also, there can be only one entanglement generation per time slot.
 
 This cycle pattern is not new. It's used in various classical 
@@ -158,3 +158,12 @@ start passing information, namely qubits, you don't send anything
 through these repeaters, only using the resulting entanglement.
 
 It will be clearer with the higher levels of the quantum network stack.
+
+## Final Thoughts
+
+The paper itself goes to detail the various error states, and the
+evaluation of the protocol from simulation so go check it out if
+that sounds fun. This was a great mental exercise for me, and
+I hope to do it again, perhaps this group's follow up paper, 
+'Designing a Quantum Network Protocol' detailing the protocol
+layer?
